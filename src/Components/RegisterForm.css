@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+.registration-section {
+  padding: 100px 5%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #040508; /* Pure Dark Background */
+}
+
+/* Background Glow Effect */
+.dark-bg-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.15), transparent 70%);
+  z-index: 0;
+}
+
+.jobseeker-dark-theme .highlight-neon { color: #3b82f6; text-shadow: 0 0 15px rgba(59, 130, 246, 0.5); }
+.college-dark-theme .highlight-neon { color: #10b981; text-shadow: 0 0 15px rgba(16, 185, 129, 0.5); }
+
+.form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  z-index: 1;
+}
+
+/* INFO SIDE */
+.status-tag-dark {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 50px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 25px;
+}
+
+.status-tag-dark span { font-size: 11px; letter-spacing: 2px; color: #94a3b8; font-weight: 700; }
+.rocket-icon { color: #3b82f6; }
+
+.form-title-dark { font-size: 56px; font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 20px; }
+.form-subtitle-dark { font-size: 18px; color: #94a3b8; line-height: 1.6; margin-bottom: 40px; }
+
+.mini-card-dark {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mini-icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.mini-text h4 { color: #ffffff; margin: 0; font-size: 16px; }
+.mini-text p { color: #64748b; margin: 5px 0 0; font-size: 13px; }
+
+/* FORM CARD */
+.form-card-dark {
+  background: #0f111a;
+  padding: 45px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.category-switcher-dark {
+  display: flex;
+  background: #040508;
+  padding: 6px;
+  border-radius: 16px;
+  margin-bottom: 35px;
+}
+
+.category-switcher-dark button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.category-switcher-dark button.active.js-active { background: #3b82f6; color: #fff; border-radius: 12px; }
+.category-switcher-dark button.active.clg-active { background: #10b981; color: #fff; border-radius: 12px; }
+
+/* INPUT STYLES */
+.input-group-dark { margin-bottom: 22px; }
+.input-group-dark label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.input-group-dark input, .input-group-dark select {
+  width: 100%;
+  padding: 16px;
+  background: #161a25;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-group-dark input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: #1c2230;
+}
+
+.input-flex-dark { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* SUBMIT BUTTON */
+.submit-btn-dark {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.4s;
+  margin-top: 10px;
+}
+
+.jobseeker-dark-theme .submit-btn-dark { background: #3b82f6; box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3); }
+.college-dark-theme .submit-btn-dark { background: #10b981; box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3); }
+
+.submit-btn-dark:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.1); }
+
+@media (max-width: 968px) {
+  .form-container { grid-template-columns: 1fr; gap: 50px; }
+  .form-title-dark { font-size: 38px; text-align: center; }
+  .form-subtitle-dark { text-align: center; }
+}
