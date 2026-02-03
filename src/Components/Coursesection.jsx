@@ -4,10 +4,10 @@ import "./Coursesection.css";
 // Assets Imports
 import FrontendImg from "../assets/Frontend.jpg";
 import BackendImg from "../assets/backend.jpg";
-import FullstackImg from "../assets/mern.png";
-import UiuxImg from "../assets/ui.jpg";
+import FullstackImg from "../assets/Mern.png";
+import UiuxImg from "../assets/UI.jpg";
 import AiImg from "../assets/AI.png";
-import MobileImg from "../assets/mobileapp.png";
+import MobileImg from "../assets/Mobileapp.png";
 
 const CoursesSection = () => {
   const courses = [

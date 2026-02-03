@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaLaptopCode, FaBriefcase, FaComments, FaBrain, FaUserCheck, FaArrowRight } from 'react-icons/fa';
 import CollegeImg from '../assets/Infolexus.jpeg'; 
-import GraduateImg from '../assets/jobseeker.jpg';
+import GraduateImg from '../assets/Jobseeker.jpg';
 import './Upskill.css';
 
 const UpskillingSection = () => {
