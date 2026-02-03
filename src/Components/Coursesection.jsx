@@ -6,6 +6,9 @@ import "./Coursesection.css";
 import BackendImg from "../assets/backend.jpg";
 import AiImg from "../assets/AI.png";
 import FullstackImg from "../assets/Mern.png";
+import FrontendImg from "../assets/Frontend.jpg";
+import UiImg from "../assets/UI.jpg";
+import MobileImg from "../assets/Mobileapp.png";
 
 
 const CoursesSection = () => {
@@ -16,7 +19,7 @@ const CoursesSection = () => {
       tech: "React • Next.js • Tailwind CSS • TypeScript",
       highlight: "Crafting Pixel-Perfect Interfaces",
 
-      img: "/mern.png",
+      img: FrontendImg,
       desc: "Master modern UI development with React. Build blazing-fast, responsive, and high-performance web applications using industry-standard tools and best practices. Focus on state management, hooks, and seamless user interactions.",
     },
     {
@@ -41,8 +44,7 @@ const CoursesSection = () => {
       tech: "Figma • Adobe XD • Prototyping",
       highlight: "Human-Centered Design Mastery",
       desc: "Master the psychology behind great design. Learn professional wireframing, high-fidelity prototyping, and user testing. Transform abstract ideas into intuitive digital experiences that users love and trust.",
-      // Inga thaan update pannirukken:
-      img: "/ui.jpg",
+      img: UiImg,
     },
     {
       id: 5,
@@ -58,8 +60,7 @@ const CoursesSection = () => {
       tech: "React Native • Flutter • Firebase",
       highlight: "Native Experience on All Platforms",
       desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
-      // Inga thaan update pannirukken:
-      img: "/mobileapp.png",
+      img: MobileImg,
     },
   ];
 
