@@ -1,0 +1,144 @@
+/* Premium Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0f172a;
+}
+
+/* ===== Section ===== */
+.career-section {
+  width: 100%;
+  min-height: 30vh;
+  background: linear-gradient(135deg, #0b1120, #111827, #1e293b);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fef3c7;
+  overflow: hidden;
+}
+
+.career-section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(251,191,36,0.25), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+}
+
+/* ===== Overlay ===== */
+.overlay {
+  width: 100%;
+  min-height: 20vh;
+  padding: 30px;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(
+    rgba(15, 23, 42, 0.55),
+    rgba(15, 23, 42, 0.65)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Content ===== */
+.content {
+  max-width: 900px;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content h1 {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #fde68a, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content p {
+  font-size: 18px;
+  color: #e5e7eb;
+  margin-bottom: 45px;
+  line-height: 1.7;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Primary Button Styles */
+.primary-btn {
+  background: linear-gradient(90deg, #fbbf24, #f97316);
+  color: #111;
+  padding: 15px 36px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 700;
+  transition: all 0.35s ease;
+  box-shadow: 0 12px 30px rgba(249,115,22,0.4);
+}
+
+/* Disabled state - Clickable illatha button style */
+.disabled-btn {
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.disabled-btn:hover {
+  transform: none; /* Mouse kondu pona movement irukathu */
+}
+
+/* Secondary Button (Contact Us) */
+.secondary-btn-link {
+  text-decoration: none; /* Link underline remove panna */
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  color: #fff;
+  padding: 15px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.secondary-btn:hover {
+  background: #fff;
+  color: #111;
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content h1 { font-size: 34px; }
+  .content p { font-size: 16px; }
+  .buttons { flex-direction: column; }
+}

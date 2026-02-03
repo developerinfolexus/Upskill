@@ -1,0 +1,153 @@
+.footer {
+  background: linear-gradient(135deg, #081028, #0f172a);
+  color: #cbd5f1;
+  padding: 70px 6% 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+}
+
+/* Company column alignment */
+.company-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logo image */
+.footer-logo {
+  width: 250px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+/* Headings */
+.footer-col h3 {
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #cbd5f1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #38bdf8;
+  padding-left: 5px;
+}
+
+/* Contact text */
+.footer-col p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.footer-col svg {
+  margin-right: 8px;
+  color: #38bdf8;
+}
+
+/* Social icons alignment */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  transition: 0.3s;
+  padding-left: 10px;
+}
+
+.social-icons a:hover {
+  background: #38bdf8;
+  transform: translateY(-4px);
+}
+
+/* Map */
+.map-col img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
+
+.map-col img:hover {
+  transform: scale(1.03);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer-bottom-content {
+  display: flex;
+  flex-direction: column; /* Items-ai onnu kela onnu kondu vara */
+  align-items: center;    /* Horizontal-a center seiya */
+  justify-content: center;
+  text-align: center;
+  gap: 10px;              /* Copyright matrum Terms idaiye gap */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-bottom a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .company-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

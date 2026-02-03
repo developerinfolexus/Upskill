@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+.learning-hub-section {
+  background-color: #040508; /* Super dark for best contrast */
+  color: #ffffff;
+  padding: 100px 5%;
+  font-family: 'Outfit', sans-serif;
+}
+
+.hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.hub-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-tag {
+  color: #00d2ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hub-header h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin: 0 0 20px;
+  color: #ffffff;
+}
+
+.highlight-text {
+  color: #00d2ff;
+}
+
+.header-subtitle {
+  color: #a0aec0; /* Clearer gray */
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Label Styling */
+.grid-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  color: #00d2ff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.label-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 210, 255, 0.2);
+}
+
+/* Path Cards - HIGH VISIBILITY */
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.path-card {
+  background: #0f111a; /* Solid background for readability */
+  border: 1px solid #1e293b;
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.path-card:hover {
+  border-color: #00d2ff;
+  background: #161a25;
+}
+
+.path-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.path-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.path-desc {
+  color: #cbd5e1; /* White-ish gray for perfect reading */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.path-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.path-card:hover .path-btn {
+  background: #00d2ff;
+  color: #000;
+  border-color: #00d2ff;
+}
+
+/* Course Grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.course-item {
+  background: #0f111a;
+  border: 1px solid #1e293b;
+  padding: 20px 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.course-cat {
+  font-size: 11px;
+  color: #00d2ff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.course-name {
+  margin: 5px 0 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.course-action {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.db-icon { color: #2d3748; font-size: 18px; }
+.view-text { font-size: 10px; color: #718096; font-weight: 700; }
+
+.course-item:hover {
+  border-color: #00d2ff;
+  background: #161a25;
+}
+
+@media (max-width: 768px) {
+  .learning-hub-section { padding: 60px 20px; }
+  .hub-header h2 { font-size: 2.2rem; }
+}

@@ -8,7 +8,7 @@ const CoursesSection = () => {
       title: "Frontend Development",
       tech: "React • Next.js • Tailwind CSS • TypeScript",
       highlight: "Crafting Pixel-Perfect Interfaces",
-      img: "/Mern.png", // Public folder path
+      img: "/mern.png", // Public folder path
       desc: "Master modern UI development with React. Build blazing-fast, responsive, and high-performance web applications using industry-standard tools and best practices. Focus on state management, hooks, and seamless user interactions.",
     },
     {
@@ -33,7 +33,7 @@ const CoursesSection = () => {
       tech: "Figma • Adobe XD • Prototyping",
       highlight: "Human-Centered Design Mastery",
       desc: "Master the psychology behind great design. Learn professional wireframing, high-fidelity prototyping, and user testing. Transform abstract ideas into intuitive digital experiences that users love and trust.",
-      img: "/UI.jpg", // Public folder path
+      img: "/ui.jpg", // Public folder path
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ const CoursesSection = () => {
       tech: "React Native • Flutter • Firebase",
       highlight: "Building Seamless Cross-Platform Apps",
       desc: "Learn to build high-performance mobile applications for both iOS and Android. Master cross-platform development, native APIs, and real-time database integration.",
-      img: "/Mobileapp.png", // Public folder path
+      img: "/mobileapp.png", // Public folder path
     },
   ];
 

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --nav-bg: #06070a;
+  --accent-cyan: #00e5ff;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.65);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+.upskill-nav {
+  font-family: var(--font-body);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: transparent;
+}
+
+.upskill-nav.nav-scrolled {
+  height: 75px;
+  background: rgba(6, 7, 10, 0.95);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.nav-container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- LOGO --- */
+.logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-text {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.logo-thin { font-weight: 300; opacity: 0.7; }
+
+/* --- NAVIGATION --- */
+.nav-links-section { flex: 1; display: flex; justify-content: center; }
+.nav-list { display: flex; list-style: none; gap: 40px; margin: 0; padding: 0; }
+
+.nav-anchor {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-anchor:hover { color: var(--accent-cyan); }
+.arrow { font-size: 10px; transition: 0.3s; opacity: 0.6; }
+
+/* --- SEARCH & BUTTONS --- */
+.action-section { display: flex; align-items: center; gap: 30px; }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: lab(93.53% 0.9 -2.42 / 0.977);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #111010;
+  font-size: 12px;
+  font-weight: 500;
+  width: 110px;
+  margin-left: 10px;
+}
+
+.search-bar:focus-within { border-color: var(--accent-cyan); width: 220px; }
+
+.btn-group { display: flex; gap: 15px; }
+
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-solid {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 11px 26px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);
+}
+
+.btn-solid:hover { background: var(--accent-cyan); }
+
+/* --- MEGAMENU --- */
+.megamenu-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #0d0f14;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 500px;
+  padding: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.has-megamenu:hover .megamenu-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.megamenu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.megamenu-col h4 { 
+  color: var(--accent-cyan); 
+  font-size: 12px; 
+  letter-spacing: 2px; 
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 8px;
+}
+.megamenu-col a { 
+  display: block; 
+  color: var(--text-secondary); 
+  text-decoration: none; 
+  font-size: 14px; 
+  margin-bottom: 12px; 
+}
+.megamenu-col a:hover { color: #fff; transform: translateX(5px); transition: 0.2s; }
+
+.mobile-toggle { display: none; color: #fff; font-size: 24px; background: none; border: none; }
+
+@media (max-width: 1200px) {
+  .nav-links-section, .search-bar { display: none; }
+  .mobile-toggle { display: block; }
+}
+/* Navbar-la irukura ellaa Link (anchor) tags-kum */
+.navbar-links a {
+    color: #ffffff !important; /* White color */
+    text-decoration: none;    /* Underline remove panna */
+    font-weight: 500;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+/* Mouse mela kondu pona color change aaga */
+.navbar-links a:hover {
+    color: #fbbf24; /* Gold/Yellow color (premium look) */
+}
+
+/* Link-ah click panni antha section-la irukum pothu theriya */
+.navbar-links a:active, 
+.navbar-links a:focus {
+    color: #fbbf24;
+}
