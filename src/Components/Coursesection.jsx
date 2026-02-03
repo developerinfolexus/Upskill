@@ -52,19 +52,12 @@ const CoursesSection = () => {
       img: AiImg,
     },
     {
-      id: 8, // or your specific ID for Mobile App
+      id: 6,
       title: "Mobile App Development",
       tech: "React Native • Flutter • Firebase",
-<<<<<<< HEAD
       highlight: "Native Experience on All Platforms",
       desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
       img: MobileImg,
-=======
-      highlight: "Building Seamless Cross-Platform Apps",
-      desc: "Learn to build high-performance mobile applications for both iOS and Android. Master cross-platform development, native APIs, and real-time database integration.",
-      // Updated Line:
-      img: "/mobileapp.png", 
->>>>>>> origin/main
     },
   ];
 
