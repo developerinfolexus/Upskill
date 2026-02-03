@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import "./Coursesection.css";
-
-// Assets Imports
-
 import BackendImg from "../assets/backend.jpg";
 import AiImg from "../assets/AI.png";
 import FullstackImg from "../assets/Mern.png";
@@ -55,12 +52,19 @@ const CoursesSection = () => {
       img: AiImg,
     },
     {
-      id: 6,
+      id: 8, // or your specific ID for Mobile App
       title: "Mobile App Development",
       tech: "React Native • Flutter • Firebase",
+<<<<<<< HEAD
       highlight: "Native Experience on All Platforms",
       desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
       img: MobileImg,
+=======
+      highlight: "Building Seamless Cross-Platform Apps",
+      desc: "Learn to build high-performance mobile applications for both iOS and Android. Master cross-platform development, native APIs, and real-time database integration.",
+      // Updated Line:
+      img: "/mobileapp.png", 
+>>>>>>> origin/main
     },
   ];
 
