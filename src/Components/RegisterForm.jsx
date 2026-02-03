@@ -42,7 +42,7 @@ const RegistrationForm = () => {
     };
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/s.hemalatha3003@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/Support@infolexus.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
