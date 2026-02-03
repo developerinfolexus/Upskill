@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from "framer-motion";
+
 import { FaSearch, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import LogoImg from '../../assets/Logor.png';
 import './Navbar.css';
@@ -18,15 +18,15 @@ const Navbar = () => {
   return (
     <nav className={`upskill-nav ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="nav-container">
-        
+
         {/* BRANDING */}
         <div className="brand-section">
           <Link to="/" className="logo-link">
             <div className="logo-container">
-              <img 
-                src={LogoImg} 
-                alt="Infolexus Logo" 
-                className="logo-image" 
+              <img
+                src={LogoImg}
+                alt="Infolexus Logo"
+                className="logo-image"
                 style={{ height: '40px', width: 'auto' }}
               />
             </div>
@@ -38,10 +38,10 @@ const Navbar = () => {
           <ul className="nav-list">
             {/* Home Link - Redirects to / path */}
             <li><Link to="/" className="nav-anchor">Home</Link></li>
-            
+
             <li className="nav-li has-megamenu">
               <span className="nav-anchor">
-                 <li><Link to="/learning-hub" className="nav-anchor">UPSKILL</Link></li> <FaChevronDown className="arrow" />
+                <Link to="/learning-hub" className="nav-anchor">UPSKILL</Link> <FaChevronDown className="arrow" />
               </span>
               <div className="megamenu-panel">
                 <div className="megamenu-grid">

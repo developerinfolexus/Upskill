@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaLaptopCode, FaBriefcase, FaComments, FaBrain, FaUserCheck, FaArrowRight, FaRocket } from 'react-icons/fa';
-import CollegeImg from '../assets/clgTrain.jpg'; 
+import { FaLaptopCode, FaBriefcase, FaComments, FaBrain, FaUserCheck, FaArrowRight } from 'react-icons/fa';
+import CollegeImg from '../assets/Infolexus.jpeg'; 
 import GraduateImg from '../assets/jobseeker.jpg';
 import './Upskill.css';
 
@@ -12,7 +12,7 @@ const UpskillingSection = () => {
     colleges: {
       title: "For Colleges & Institutions",
       subtitle: "CAMPUS TO CORPORATE",
-      desc: "This specialized initiative is designed to bridge the critical gap between academic learning and industry expectations. We empower students by transforming theoretical knowledge into industry-ready skills through immersive, hands-on coding workshops focused on modern tech stacks. Our comprehensive support system includes deep-tech training in MERN and Cloud architectures, ensuring students are prepared for high-scale environments.",
+      desc: "This specialized initiative is designed to bridge the critical gap between academic learning and industry expectations. We empower students by transforming theoretical knowledge into industry-ready skills through immersive, hands-on coding workshops focused on modern tech stacks.",
       image: CollegeImg,
       cards: [
         { icon: <FaLaptopCode />, title: "Technical Training", info: "Hands-on coding workshops." },
@@ -25,9 +25,7 @@ const UpskillingSection = () => {
     graduates: {
       title: "For Graduates & Job Seekers",
       subtitle: "CAREER ACCELERATOR",
-      // ...existing code...
-desc: "Unlock your potential with our industry-focused career accelerator programs. Designed for graduates and job seekers, our specialized tracks provide hands-on experience, practical skills, and mentorship to help you land your first high-paying tech role. Gain real-world exposure, master in-demand technologies, and step confidently into your dream career.",
-// ...existing code...
+      desc: "Unlock your potential with our industry-focused career accelerator programs. Designed for graduates and job seekers, our specialized tracks provide hands-on experience, practical skills, and mentorship to land high-paying tech roles.",
       image: GraduateImg,
       cards: [
         { icon: <FaLaptopCode />, title: "Full Stack Specialization", info: "Master modern web tech." },
@@ -58,20 +56,17 @@ desc: "Unlock your potential with our industry-focused career accelerator progra
               <FaArrowRight />
             </button>
           ))}
-          
-         
         </div>
 
         <div className="upskill-content">
           <AnimatePresence mode="wait">
             <motion.div 
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.4 }}
             >
-              {/* HERO BOX */}
               <div className="content-hero-card">
                 <div className="hero-text">
                   <span className="hero-sub">{content[activeTab].subtitle}</span>
@@ -83,7 +78,6 @@ desc: "Unlock your potential with our industry-focused career accelerator progra
                 </div>
               </div>
 
-              {/* CARDS GRID - Now directly under hero box */}
               <div className="upskill-grid">
                 {content[activeTab].cards.map((card, index) => (
                   <div className="upskill-card" key={index}>
