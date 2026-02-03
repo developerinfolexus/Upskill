@@ -2,22 +2,22 @@ import React, { useEffect } from "react";
 import "./Coursesection.css";
 
 // Assets Imports
-import FrontendImg from "../assets/Frontend.jpg";
+
 import BackendImg from "../assets/backend.jpg";
 import AiImg from "../assets/AI.png";
 import FullstackImg from "../assets/mern.png";
-import UiuxImg from "../assets/ui.jpg";
-import MobileImg from "../assets/mobileapp.png";
+
 
 const CoursesSection = () => {
   const courses = [
-    {
+   {
       id: 1,
       title: "Frontend Development",
       tech: "React • Next.js • Tailwind CSS • TypeScript",
       highlight: "Crafting Pixel-Perfect Interfaces",
+      
+      img: "/mern.png", 
       desc: "Master modern UI development with React. Build blazing-fast, responsive, and high-performance web applications using industry-standard tools and best practices. Focus on state management, hooks, and seamless user interactions.",
-      img: FrontendImg,
     },
     {
       id: 2,
@@ -41,7 +41,8 @@ const CoursesSection = () => {
       tech: "Figma • Adobe XD • Prototyping",
       highlight: "Human-Centered Design Mastery",
       desc: "Master the psychology behind great design. Learn professional wireframing, high-fidelity prototyping, and user testing. Transform abstract ideas into intuitive digital experiences that users love and trust.",
-      img: UiuxImg,
+      // Inga thaan update pannirukken:
+      img: "/ui.jpg", 
     },
     {
       id: 5,
@@ -57,7 +58,8 @@ const CoursesSection = () => {
       tech: "React Native • Flutter • Firebase",
       highlight: "Native Experience on All Platforms",
       desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
-      img: MobileImg,
+      // Inga thaan update pannirukken:
+      img: "/mobileapp.png", 
     },
   ];
 
