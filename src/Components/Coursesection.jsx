@@ -1,6 +1,13 @@
 import React from "react";
 import "./Coursesection.css";
 
+// Assets Imports
+
+import BackendImg from "../assets/backend.jpg";
+import AiImg from "../assets/AI.png";
+import FullstackImg from "../assets/mern.png";
+
+
 const CoursesSection = () => {
   const courses = [
     {
@@ -44,12 +51,13 @@ const CoursesSection = () => {
       img: "/AI.png", // Moved to public folder
     },
     {
-      id: 8,
+      id: 6,
       title: "Mobile App Development",
       tech: "React Native • Flutter • Firebase",
-      highlight: "Building Seamless Cross-Platform Apps",
-      desc: "Learn to build high-performance mobile applications for both iOS and Android. Master cross-platform development, native APIs, and real-time database integration.",
-      img: "/Mobileapp.png", // Public folder path
+      highlight: "Native Experience on All Platforms",
+      desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
+      // Inga thaan update pannirukken:
+      img: "/mobileapp.png", 
     },
   ];
 
