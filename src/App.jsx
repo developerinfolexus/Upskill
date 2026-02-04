@@ -44,14 +44,10 @@ export default function App() {
         <Route path="/Course" element={<Course />} />
         <Route path="/Career" element={<Career />} />
         
-
-        {/* Requirements Fix: Coursesection-ku thani Route add pannirukaen. 
-            Course component-la irukura 'Get Started' click panna inga varum. */}
         <Route path="/coursesection" element={<Coursesection />} />
-        <Route path="/learning-hub" element={<LearningHub />} />
+        <Route path="/Learning-hub" element={<LearningHub />} />
         
       </Routes>
-
       <Footer />
     </Router>
   );

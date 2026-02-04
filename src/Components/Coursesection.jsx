@@ -15,7 +15,7 @@ const CoursesSection = () => {
       title: "Frontend Development",
       tech: "React • Next.js • Tailwind CSS • TypeScript",
       highlight: "Crafting Pixel-Perfect Interfaces",
-      img: "/Mern.png", // Public folder path
+      img: "/Frontend.jpg", // Public folder path
       desc: "Master modern UI development with React. Build blazing-fast, responsive, and high-performance web applications using industry-standard tools and best practices. Focus on state management, hooks, and seamless user interactions.",
     },
     {
@@ -57,12 +57,12 @@ const CoursesSection = () => {
       highlight: "Native Experience on All Platforms",
       desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
       // Inga thaan update pannirukken:
-      img: "/mobileapp.png", 
+      img: "/Mobileapp.png", 
     },
   ];
 
   return (
-    <section className="courses-section">
+<section id="coursesection" className="courses-section">
       <div className="bg-blur-effect"></div>
       <div className="container">
         <header className="courses-header">
