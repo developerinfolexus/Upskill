@@ -1,0 +1,153 @@
+/* 🔥 HIGH PREMIUM INTERACTIVE FONT (ONLY CHANGE) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 25px;
+}
+
+/* ===== Section ===== */
+.demo-section {
+  width: 100%;
+  min-height: 60vh; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fef3c7;
+  overflow: hidden;
+}
+
+/* ===== Overlay ===== */
+.overlay {
+  width: 100%;
+  min-height: 90vh;
+  padding: 80px 30px 40px 30px; 
+  backdrop-filter: blur(4px);
+  background: linear-gradient(
+    rgba(15, 23, 42, 0.7),
+    rgba(15, 23, 42, 0.8)
+  );
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+/* ===== Content ===== */
+.content {
+  max-width: 600px;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔥 PREMIUM ONE-LINE HEADING (FONT ONLY) */
+.content h1 {
+  font-family: 'Space Grotesk', sans-serif; /* 🔥 changed */
+  font-size: 65px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  letter-spacing: -0.3px;
+  white-space: nowrap; /* 🔥 orey line */
+  background: linear-gradient(90deg, #ffffff, #0ebec7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Heading kulla ithai replace panunga */
+.content h1 {
+  margin-top:-20px;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 2.5px; /* Professional touch kaga */
+}
+
+/* Paragraph kulla ithai replace panunga */
+.content p {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: #f0f0f0;
+  font-size:140%;
+   margin-top: 8px;
+}
+
+/* Buttons kulla ithai replace panunga */
+.primary-btn, 
+.secondary-btn {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+/* ===== Buttons Container ===== */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Equal Button Sizes */
+.primary-btn, 
+.secondary-btn {
+  font-family: 'Space Grotesk', sans-serif; /* 🔥 changed */
+  width: 180px;            
+  height: 54px;            
+  display: inline-flex;    
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;     
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #1e69ff, #8b2dff); 
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(30, 105, 255, 0.3);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.secondary-btn-link {
+  text-decoration: none;
+}
+
+/* Responsive Fix */
+@media (max-width: 600px) {
+  .content h1 { 
+    font-size: 32px;
+    white-space: normal; /* mobile-la break allow */
+  }
+  .buttons { flex-direction: column; gap: 25px; }
+  .primary-btn, .secondary-btn { width: 220px; }
+  .overlay { padding: 60px 20px 30px 20px; }
+}
+
+section.demo-section {
+  margin-top: 40px;
+  height:200px;
+  margin-bottom: -79px; 
+}

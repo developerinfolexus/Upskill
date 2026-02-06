@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+  --bg: #020204;
+  --glass: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.12);
+  --blue: #0066ff;
+  --pink: #ff008c;
+  --purple: #8f00ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+   color: #ffffff;
+}
+
+/* ===== Wrapper ===== */
+.premium-wrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Animated Background ===== */
+.ambient-bg .orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  filter: blur(140px);
+  opacity: 0.4;
+  animation: float 18s infinite alternate;
+}
+
+.orb.blue { background: var(--blue); top: -10%; left: -10%; }
+.orb.pink { background: var(--pink); bottom: -10%; right: -10%; animation-delay: -5s; }
+.orb.purple { background: var(--purple); top: 30%; right: -15%; animation-delay: -8s; }
+
+@keyframes float {
+  to { transform: translate(120px, 80px); }
+}
+
+/* ===== Card ===== */
+.premium-form-card {
+  max-width: 850px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 80px;
+  backdrop-filter: blur(18px);
+  z-index: 2;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+}
+
+/* ===== Header ===== */
+.premium-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.premium-header h1 {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.premium-header h1 span {
+  background: linear-gradient(90deg, var(--blue), var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.premium-header p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* ===== Grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+/* ===== Fields ===== */
+.field {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 16px;
+  transition: 0.35s ease;
+}
+
+.field:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue);
+  box-shadow: 0 10px 30px rgba(0,102,255,0.25);
+}
+
+.field label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  margin-top: 8px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #b4adad;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.field select option {
+  background: #f2eded;
+}
+
+/* ===== Mode Cards ===== */
+.mode-cards {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.mode {
+  flex: 1;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  cursor: pointer;
+  transition: 0.35s;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mode input {
+  display: none;
+}
+
+.mode.active,
+.mode:hover {
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  box-shadow: 0 15px 40px rgba(143,0,255,0.4);
+}
+
+/* ===== Buttons ===== */
+.actions {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.glass-btn {
+  flex: 1;
+  padding: 18px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.glass-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.primary-btn {
+  flex: 1.5;
+  padding: 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, var(--blue), var(--purple), var(--pink));
+  background-size: 200%;
+  transition: 0.5s;
+}
+
+.primary-btn:hover {
+  background-position: right;
+  box-shadow: 0 20px 50px rgba(0,102,255,0.5);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .span-2 {
+    grid-column: span 1;
+  }
+  .actions {
+    flex-direction: column-reverse;
+  }
+}

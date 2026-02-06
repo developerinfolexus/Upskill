@@ -25,7 +25,6 @@ const LearningTracks = () => {
       <div className="roadmap-container">
         {/* Header */}
         <div className="roadmap-header">
-          <span className="roadmap-badge">OUR COURSES</span>
           <h2 className="roadmap-title">Explore Learning <span className="highlight">Tracks</span></h2>
           <p className="roadmap-subtitle">Choose Path to Elevate Your Career Industry-led curriculum.</p>
         </div>

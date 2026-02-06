@@ -15,8 +15,7 @@ const CoursesSection = () => {
       title: "Frontend Development",
       tech: "React • Next.js • Tailwind CSS • TypeScript",
       highlight: "Crafting Pixel-Perfect Interfaces",
-
-      img: "/mern.png",
+      img: "/Frontend.jpg",
       desc: "Master modern UI development with React. Build blazing-fast, responsive, and high-performance web applications using industry-standard tools and best practices. Focus on state management, hooks, and seamless user interactions.",
     },
     {
@@ -42,7 +41,7 @@ const CoursesSection = () => {
       highlight: "Human-Centered Design Mastery",
       desc: "Master the psychology behind great design. Learn professional wireframing, high-fidelity prototyping, and user testing. Transform abstract ideas into intuitive digital experiences that users love and trust.",
       // Inga thaan update pannirukken:
-      img: "/ui.jpg",
+      img: "/UI.jpg",
     },
     {
       id: 5,
@@ -59,11 +58,9 @@ const CoursesSection = () => {
       highlight: "Native Experience on All Platforms",
       desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
       // Inga thaan update pannirukken:
-      img: "/mobileapp.png",
->>>>>>>>> Temporary merge branch 2
+      img: "/Mobileapp.png",
     },
   ];
-
   return (
 <section id="coursesection" className="courses-section">
       <div className="bg-blur-effect"></div>

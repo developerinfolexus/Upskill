@@ -13,7 +13,7 @@
   font-family: var(--font-body);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 200%;
   height: 95px;
   display: flex;
   align-items: center;

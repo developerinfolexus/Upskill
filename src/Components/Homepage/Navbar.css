@@ -191,3 +191,109 @@
 .navbar-links a:focus {
     color: #fbbf24;
 }
+/* ACTION SECTION WRAPPER */
+.action-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* THE TEXT + ARROW LINK */
+.course-link-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cta-label {
+  color: #8fa5a7eb; /* High visibility red */
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.cta-arrow-icon {
+  color: #1bb2e9;
+  font-size: 1rem;
+  transition: transform 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+/* INTERACTIVE HOVER EFFECTS */
+
+/* 1. Arrow slides to the right on hover */
+.course-link-cta:hover .cta-arrow-icon {
+  transform: translateX(6px);
+}
+
+/* 2. Text gets slightly brighter/bolder */
+.course-link-cta:hover .cta-label {
+  color:  #e6eef1;
+  text-shadow: 0 0 10px rgba(233, 27, 27, 0.2);
+}
+
+
+.course-link-cta:hover::after {
+  width: 100%;
+}
+
+/* MOBILE TOGGLE FIX */
+.mobile-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f1f4f5;
+  display: flex;
+  align-items: center;
+}
+/* THE TEXT + ARROW LINK WITH BORDER */
+.course-link-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 8px 20px; /* Added padding for the border space */
+  position: relative;
+  transition: all 0.3s ease;
+  
+  /* BORDER ADDED HERE */
+  border: 1.5px solid rgba(242, 248, 247, 0.3); /* Low opacity Cyan border */
+  border-radius: 50px; /* Makes it a clean pill shape */
+}
+
+.cta-label {
+  color: var(--accent-cyan);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.cta-arrow-icon {
+  color: var(--accent-cyan);
+  font-size: 14px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* INTERACTIVE HOVER EFFECTS */
+
+.course-link-cta:hover {
+  background: rgba(0, 229, 255, 0.05); /* Very light cyan tint background */
+  border-color: var(--accent-cyan); /* Brighten border on hover */
+  box-shadow: 0 0 15px rgba(246, 246, 246, 0.2); /* Soft glow effect */
+}
+
+/* Arrow moves right on hover */
+.course-link-cta:hover .cta-arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Text color change */
+.course-link-cta:hover .cta-label {
+  color: #ffffff;
+}

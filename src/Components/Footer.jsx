@@ -36,10 +36,10 @@ export default function Footer() {
           </p>
 
           <div className="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/company/infolexus-solutions/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a href="https://x.com/InfolexusOff" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
+            <a href="https://www.facebook.com/share/1GEP6XrvW2/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/infolexus_solutions?igsh=NTJlZ3FtaDFzdHh2" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
           </div>
         </div>
 
@@ -60,11 +60,11 @@ export default function Footer() {
           <h3>Contact Us</h3>
 
           <p className="contact-item">
-            <FaMapMarkerAlt className="footer-icon" /> 
+           <FaMapMarkerAlt className="location-icon" />
             <span>
-              Infolexus Solutions,<br />
-              63/54–55, Dhamu Nagar,<br />
-              Puliyakulam, Coimbatore – 641045
+              Infolexus Solutions,
+                 63/54–55, Dhamu Nagar,
+                 Puliyakulam, Coimbatore – 641045
             </span>
           </p>
 

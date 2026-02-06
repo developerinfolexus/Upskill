@@ -70,6 +70,7 @@ const Navbar = () => {
             </li>
 
             {/* Link components correctly styled as <li> items */}
+           
             <li><Link to="/Upskill" className="nav-anchor">Learning Hub</Link></li>
             <li><Link to="/RegisterForm" className="nav-anchor">Contact Us</Link></li>
           </ul>

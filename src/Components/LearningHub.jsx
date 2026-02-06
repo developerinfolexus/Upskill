@@ -15,7 +15,12 @@ const LearningHub = () => {
   const navigate = useNavigate();
 
   const learningPaths = [
-    { title: "Web Development", icon: <FaCode />, color: "#00d2ff", desc: "Master Modern Frontend & Backend with industry standards and live projects." },
+    { title: "Web Development", 
+      icon: <FaCode />, 
+      color: "#00d2ff", 
+      desc: "Master Modern Frontend & Backend with industry standards and live projects."
+    },
+
     { title: "Cloud Architecting", icon: <FaCloud />, color: "#ff9f43", desc: "Deploy and scale global applications with AWS, Azure & Google Cloud." },
     { title: "Soft Skills", icon: <FaUserTie />, color: "#a55eea", desc: "Get industry-recognized certifications to accelerate your career growth." },
     { title: "Skill Assessment", icon: <FaSearchPlus />, color: "#2bcbba", desc: "Evaluate your technical proficiency and find the right learning path." }

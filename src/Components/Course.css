@@ -25,7 +25,8 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   border-bottom: 2px solid #38bdf8;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  margin-top: 25px;
 }
 
 .roadmap-title {

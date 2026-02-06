@@ -1,7 +1,7 @@
 .footer {
   background: linear-gradient(135deg, #081028, #0f172a);
   color: #cbd5f1;
-  padding: 70px 6% 30px;
+  padding: 65px 6% 39px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -9,7 +9,7 @@
 .footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 40px;
+  gap: 35px;
 }
 
 /* Company column alignment */
@@ -22,24 +22,27 @@
 /* Logo image */
 .footer-logo {
   width: 250px;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
   object-fit: contain;
 }
 
 /* Headings */
 .footer-col h3 {
   color: #ffffff;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /* Links */
 .footer-col ul {
   list-style: none;
-  padding: 0;
+  padding: 12px;
 }
 
 .footer-col ul li {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .footer-col ul li a {
@@ -55,22 +58,22 @@
 
 /* Contact text */
 .footer-col p {
-  margin-bottom: 12px;
+  margin-bottom: 19px;
   line-height: 1.6;
 }
 
 .footer-col svg {
-  margin-right: 8px;
+  margin-right: 10px;
   color: #38bdf8;
 }
 
 /* Social icons alignment */
 .social-icons {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   gap: 12px;
   justify-content: flex-start;
-  padding-left: 10px;
+  padding-right: 21px;
 }
 
 .social-icons a {
@@ -147,7 +150,35 @@
 
   .footer-bottom {
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
     text-align: center;
   }
 }
+.contact-item {
+  display: flex;
+  align-items: flex-start; /* icon top align aagum */
+  gap: 12px;               /* icon & text gap */
+}
+
+.contact-icon {
+  font-size: 18px;
+  color: #3bb6ff;          /* icon color */
+  margin-top: 10px;         /* text line-ku match panna */
+}
+
+.contact-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #dbeafe;
+}
+.location-icon {
+  font-size: 33px;   /* 🔥 size increase */
+  color: #38bdf8;    /* blue / premium color */
+}
+/* 🔥 Icon size & look */
+.footer-icon {
+  font-size: 19px;       /* icon size increase */
+  color: #38bdf8;        /* premium blue */
+  flex-shrink: 0;   
+  margin-top: 5px;     /* icon shrink aagadhu */
+} 

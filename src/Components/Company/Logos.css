@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+
+/* ===============================
+   SECTION – PREMIUM BLUE THEME
+================================ */
+.trusted-section {
+  background: #f9f6f6; /* Ultra light background */
+  padding: 50px 0 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* TITLE – NAVY BLUE TYPOGRAPHY */
+.trusted-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #0a192f; /* Premium Navy Blue */
+  font-size: clamp(28px, 5vw, 46px); 
+  font-weight: 800;
+  margin-bottom: 60px;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+
+/* 🔥 AMBER / GOLD HIGHLIGHT (Replaced Red) */
+.trusted-count {
+  color: #d4af37; /* Metallic Gold/Amber */
+  position: relative;
+  font-weight: 800;
+  padding: 0 4px;
+  /* Subtle glow instead of red gradient */
+  background: linear-gradient(120deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0) 100%);
+  border-radius: 8px;
+}
+
+/* ===============================
+   SMOOTH SLIDER ENGINE
+================================ */
+.logo-slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: slideLoop 35s linear infinite;
+}
+
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+/* ===============================
+   LOGO BOX – ALWAYS IN COLOR
+================================ */
+.logo-box {
+  min-width: 180px;
+  height: 100px;
+  margin: 0 35px;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
+  /* DEFAULT COLOR (Grayscale Removed) */
+  filter: grayscale(0%); 
+  opacity: 0.9; /* Slight opacity for elegance */
+  
+  position: relative;
+  border-radius: 20px;
+  background-color: transparent; 
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+/* HOVER EFFECT – SOFT NAVY GLOW */
+.logo-box:hover {
+  opacity: 1;
+  transform: scale(1.12) translateY(-8px);
+  
+  /* Subtle Navy/White background hover */
+  background-color: #f0f4f8; 
+  box-shadow: 0 15px 35px rgba(10, 25, 47, 0.08); /* Navy tinted shadow */
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes slideLoop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .trusted-text { font-size: 26px; letter-spacing: -0.8px; }
+  .logo-box { min-width: 130px; height: 75px; margin: 0 20px; }
+  .trusted-section { padding: 60px 0; }
+}
