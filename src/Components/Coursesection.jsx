@@ -1,14 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Coursesection.css";
 
-// Assets Imports
-
-import BackendImg from "../assets/backend.jpg";
-import AiImg from "../assets/AI.png";
-import FullstackImg from "../assets/Mern.png";
-
-
 const CoursesSection = () => {
+  const navigate = useNavigate();
+
   const courses = [
     {
       id: 1,
@@ -16,53 +12,64 @@ const CoursesSection = () => {
       tech: "React • Next.js • Tailwind CSS • TypeScript",
       highlight: "Crafting Pixel-Perfect Interfaces",
       img: "/Frontend.jpg",
-      desc: "Master modern UI development with React. Build blazing-fast, responsive, and high-performance web applications using industry-standard tools and best practices. Focus on state management, hooks, and seamless user interactions.",
+      projects: "10+",
+      actionText: "Start Building UI",
+      desc: "Master modern UI development with React. Build blazing-fast, responsive, and high-performance web applications using industry-standard tools and best practices.",
     },
     {
       id: 2,
       title: "Backend Development",
       tech: "Node.js • Express • MongoDB • Redis",
       highlight: "Architecting Scalable Systems",
-      desc: "Deep dive into server-side architecture. Learn to design robust APIs, handle secure authentication, and manage complex database schemas. Focus on performance tuning, security, and building systems that scale for millions.",
-      img: "/backend.jpg", // Moved to public folder
+      img: "/backend.jpg",
+      projects: "12+",
+      actionText: "Explore Backend Systems",
+      desc: "Deep dive into server-side architecture. Learn to design robust APIs, secure authentication, and scalable databases.",
     },
     {
       id: 3,
       title: "Full Stack Master",
       tech: "MERN Stack • GraphQL • AWS • Docker",
       highlight: "Ultimate End-to-End Proficiency",
-      desc: "Become an architect of the web. This comprehensive journey covers everything from front-facing UI to cloud deployment. Work on real-world projects involving real-time data, complex workflows, and cloud-native architecture.",
-      img: "/Mern.png", // Ensure filename matches exactly
+      img: "/Mern.png",
+      projects: "15+",
+      actionText: "Become Full Stack Ready",
+      desc: "End-to-end mastery from UI to cloud deployment with real-world full-stack projects.",
     },
     {
       id: 4,
       title: "UI / UX Design",
       tech: "Figma • Adobe XD • Prototyping",
       highlight: "Human-Centered Design Mastery",
-      desc: "Master the psychology behind great design. Learn professional wireframing, high-fidelity prototyping, and user testing. Transform abstract ideas into intuitive digital experiences that users love and trust.",
-      // Inga thaan update pannirukken:
       img: "/UI.jpg",
+      projects: "8+",
+      actionText: "Design Better Experiences",
+      desc: "Learn professional wireframing, prototyping, and usability testing with real design challenges.",
     },
     {
       id: 5,
       title: "AI & Data Science",
       tech: "Python • ML • TensorFlow • PyTorch",
       highlight: "Intelligence Through Data",
-      desc: "Step into the future with Machine Learning. Learn to analyze massive datasets and build predictive models. Master neural networks and natural language processing to create intelligent solutions for real-world business challenges.",
-      img: "/AI.png", // Moved to public folder
+      img: "/AI.png",
+      projects: "14+",
+      actionText: "Work With Data Models",
+      desc: "Analyze data, build ML models, and create intelligent systems for real-world problems.",
     },
     {
       id: 6,
       title: "Mobile App Development",
       tech: "React Native • Flutter • Firebase",
       highlight: "Native Experience on All Platforms",
-      desc: "Bridge the gap between iOS and Android. Build high-performance cross-platform mobile apps using a single codebase. Learn mobile-first design, push notifications, and local storage for a seamless mobile experience.",
-      // Inga thaan update pannirukken:
       img: "/Mobileapp.png",
+      projects: "9+",
+      actionText: "Build Mobile Apps",
+      desc: "Create high-performance cross-platform mobile applications with a single codebase.",
     },
   ];
+
   return (
-<section id="coursesection" className="courses-section">
+    <section id="coursesection" className="courses-section">
       <div className="bg-blur-effect"></div>
       <div className="container">
         <header className="courses-header">
@@ -80,7 +87,11 @@ const CoursesSection = () => {
             >
               <div className="course-image-group">
                 <div className="image-card-wrapper">
-                  <img src={course.img} alt={course.title} className="premium-img" />
+                  <img
+                    src={course.img}
+                    alt={course.title}
+                    className="premium-img"
+                  />
                   <div className="premium-overlay">
                     <p className="overlay-text">{course.highlight}</p>
                   </div>
@@ -93,13 +104,14 @@ const CoursesSection = () => {
                   <span className="pulse-dot"></span>
                   {course.tech}
                 </div>
+
                 <h3 className="premium-h3">{course.title}</h3>
                 <div className="premium-divider"></div>
                 <p className="premium-desc">{course.desc}</p>
 
                 <div className="course-stats">
                   <div className="stat-item">
-                    <strong>12+</strong>
+                    <strong>{course.projects}</strong>
                     <span>Projects</span>
                   </div>
                   <div className="stat-item">
@@ -107,6 +119,14 @@ const CoursesSection = () => {
                     <span>Mentorship</span>
                   </div>
                 </div>
+
+                {/* ✅ BUTTON → COURSE FORM PAGE */}
+                <button
+                  className="course-action-btn"
+                  onClick={() => navigate("/courseform")}
+                >
+                  {course.actionText}
+                </button>
               </div>
             </div>
           ))}

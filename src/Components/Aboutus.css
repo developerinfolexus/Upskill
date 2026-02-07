@@ -157,7 +157,7 @@
   position: absolute;
   bottom: 5%;
   right: -10%;
-  background: #ffffff;
+  background: #28a745;
   padding: 12px 20px;
   border-radius: 12px;
   display: flex;
@@ -170,16 +170,16 @@
 .card-icon {
   width: 40px;
   height: 40px;
-  background: #e0f2fe;
-  color: #0091d5;
+  background: #be9558;
+  color: #eef7fb;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-text h4 { margin: 0; font-size: 16px; color: #111827; }
-.card-text p { margin: 0; font-size: 12px; color: #6b7280; }
+.card-text h4 { margin: 0; font-size: 16px; color: #271511; }
+.card-text p { margin: 0; font-size: 12px; color: #806b6b; }
 
 @media (max-width: 768px) {
   .about-wrapper { flex-direction: column; text-align: center; }

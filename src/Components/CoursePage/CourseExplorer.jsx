@@ -5,14 +5,15 @@ import {
   FaTimes, 
   FaArrowRight,
   FaEye,
-  FaAward
+  FaAward,
+  FaClock // Added for duration
 } from 'react-icons/fa'; 
 import { motion, AnimatePresence } from 'framer-motion';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import './CourseExplorer.css';
-import Demopage from './Demopage'; // Importing the Demopage component
+import Demopage from './Demopage';
 
 const COURSE_DATA = [
   {
@@ -23,6 +24,7 @@ const COURSE_DATA = [
     price: "Premium",
     tag: "Analytics",
     color: "#00e5ff",
+    duration: "6 Months", 
     img: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Master statistical analysis, data visualization, and predictive modeling using Python and R."
   },
@@ -34,6 +36,7 @@ const COURSE_DATA = [
     price: "New",
     tag: "Advanced",
     color: "#7c4dff",
+    duration: "4 Months",
     img: "https://images.pexels.com/photos/17483874/pexels-photo-17483874/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-depicts-a-look-inside-the-complexity-of-an-ai-language-model-it-was-created-by-artist-wes-cockx-as-part-of-the-visual-con.png?auto=compress&cs=tinysrgb&w=800",
     description: "Build next-gen applications using LLMs, Prompt Engineering, and OpenAI APIs."
   },
@@ -45,6 +48,7 @@ const COURSE_DATA = [
     price: "Trending",
     tag: "Growth",
     color: "#ff007a",
+    duration: "4 Months",
     img: "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Master SEO, SEM, Social Media Strategy, and Performance Marketing for the digital era."
   },
@@ -56,6 +60,7 @@ const COURSE_DATA = [
     price: "Free",
     tag: "Web Dev",
     color: "#ffd600",
+    duration: "4 Months",
     img: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "End-to-end development using Python, Django, and modern React frontend frameworks."
   },
@@ -67,6 +72,7 @@ const COURSE_DATA = [
     price: "Enterprise",
     tag: "Backend",
     color: "#00e676",
+    duration: "6 Months",
     img: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Master Java Spring Boot, Microservices, and Angular for high-performance enterprise apps."
   },
@@ -78,8 +84,83 @@ const COURSE_DATA = [
     price: "Creative",
     tag: "Design",
     color: "#f50057",
+    duration: "4 Months",
     img: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Learn user-centric design principles, prototyping in Figma, and usability testing."
+  },
+   /* 🔥 NEW COURSES ADDED BELOW 🔥 */
+
+  {
+    id: 7,
+    title: "Artificial Intelligence",
+    instructor: "AI Faculty Team",
+    rating: 4.9,
+    price: "Advanced",
+    tag: "AI",
+    color: "#18ffff",
+    duration: "6 Months",
+    img: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Learn core AI concepts including intelligent agents, search algorithms, and real-world AI applications."
+  },
+  {
+    id: 8,
+    title: "AI & Generative AI",
+    instructor: "AI Research Team",
+    rating: 5.0,
+    price: "Trending",
+    tag: "GenAI",
+    color: "#651fff",
+    duration: "5 Months",
+    img: "https://images.pexels.com/photos/8386369/pexels-photo-8386369.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Hands-on training with Generative AI, LLMs, prompt engineering, and AI-powered products."
+  },
+  {
+    id: 9,
+    title: "Data Science + AI + GenAI",
+    instructor: "Industry Experts",
+    rating: 5.0,
+    price: "Premium",
+    tag: "AI Stack",
+    color: "#00e676",
+    duration: "8 Months",
+    img: "https://images.pexels.com/photos/8439093/pexels-photo-8439093.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Complete career track covering Data Science, Artificial Intelligence, and Generative AI projects."
+  },
+  {
+    id: 10,
+    title: "Data Analysis",
+    instructor: "Analytics Team",
+    rating: 4.8,
+    price: "Popular",
+    tag: "Analytics",
+    color: "#ffab00",
+    duration: "4 Months",
+    img: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Learn Excel, SQL, Power BI, and Python to analyze and visualize real-world business data."
+  },
+  {
+    id: 11,
+    title: "MERN Stack",
+    instructor: "Full Stack Team",
+    rating: 4.9,
+    price: "Hot",
+    tag: "Full Stack",
+    color: "#00b0ff",
+    duration: "6 Months",
+    img: "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Build full-stack web apps using MongoDB, Express, React, and Node.js with deployment."
+  },
+  {
+    id: 12,
+    title: "Programming in C",
+    instructor: "Core Programming Faculty",
+    rating: 4.6,
+    price: "Foundation",
+    tag: "Programming",
+    color: "#ff5252",
+    duration: "3 Months",
+    img: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Strong foundation in C programming, data structures basics, and problem-solving techniques."
   }
 ];
 
@@ -144,7 +225,13 @@ const CourseExplorer = () => {
                   <div className="rating"><FaStar /> {course.rating}</div>
                 </div>
                 <h3>{course.title}</h3>
-                <p className="instructor">Instructed by <b>{course.instructor}</b></p>
+                
+                
+                {/* 🔥 DURATION ADDED TO CARD */}
+                <div className="card-duration">
+                   <FaClock /> {course.duration}
+                </div>
+
                 <div className="card-footer-line" style={{ background: course.color }}></div>
               </div>
             </motion.div>
@@ -178,9 +265,9 @@ const CourseExplorer = () => {
                   <div className="img-gradient-overlay"></div>
                 </div>
                 
-                <div className="modal-text">
+                <div className="modal-text"><br/>
                   <span className="modal-badge" style={{ color: selectedCourse.color }}>
-                    {selectedCourse.tag} • Certified
+                    {selectedCourse.tag} • {selectedCourse.duration}
                   </span>
                   <h2>{selectedCourse.title}</h2>
                   <p className="description">{selectedCourse.description}</p>
@@ -188,11 +275,27 @@ const CourseExplorer = () => {
                   <div className="features-grid">
                     <div className="feature-item">
                       <FaCheckCircle className="check" />
-                      <span>Life-time access</span>
+                      <span>Performance based Stipend</span>
                     </div>
                     <div className="feature-item">
                       <FaCheckCircle className="check" />
-                      <span>Industry Projects</span>
+                      <span> Live Industry Projects</span>
+                    </div>
+                    <div className="feature-item">
+                      <FaCheckCircle className="check" />
+                      <span> Internship Opportunity</span>
+                    </div>
+                    <div className="feature-item">
+                      <FaCheckCircle className="check" />
+                      <span> 100% Placement Assistance</span>
+                    </div>
+                    <div className="feature-item">
+                      <FaCheckCircle className="check" />
+                      <span> Industry Certification</span>
+                    </div>
+                    <div className="feature-item">
+                      <FaCheckCircle className="check" />
+                      <span> Mock Interviews</span>
                     </div>
                   </div>
 
@@ -212,7 +315,7 @@ const CourseExplorer = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <Demopage /> {/* Rendering the Demopage component */}
+      <Demopage />
     </div>
   );
 };

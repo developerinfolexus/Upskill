@@ -7,7 +7,7 @@
 
 .courses-section {
   padding: 120px 20px;
-  background: #f8fafc;
+  background: lch(79.79% 16.11 211.81);
   position: relative;
   overflow: hidden;
 }
@@ -242,4 +242,21 @@
   .premium-divider { margin: 0 auto 30px; }
   .course-stats { justify-content: center; }
   .courses-title { font-size: 2.5rem; }
+}
+.course-action-btn {
+  margin-top: 40px;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.3);
 }
